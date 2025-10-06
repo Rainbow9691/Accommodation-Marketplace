@@ -1,4 +1,6 @@
 package com.dcl.accommodate.shared;
 
-public class ResponseStructure {
+public class ResponseStructure<T> {
+
+
 }

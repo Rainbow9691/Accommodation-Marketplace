@@ -1,10 +1,7 @@
 package com.dcl.accommodate.dto.request;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import com.dcl.accommodate.ENUMS.UserRoles;
+import com.dcl.accommodate.enums.UserRoles;
 
 import java.util.Date;
 

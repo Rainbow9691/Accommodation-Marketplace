@@ -7,7 +7,7 @@ import jakarta.persistence.Enumerated;
 import java.time.Instant;
 import java.util.Date;
 import java.util.UUID;
-import com.dcl.accommodate.ENUMS.UserRoles;
+import com.dcl.accommodate.enums.UserRoles;
 
 public class UserRegistrationResponse {
 
@@ -25,71 +25,80 @@ public class UserRegistrationResponse {
         return userId;
     }
 
-    public void setUserId(UUID userId) {
+    public UserRegistrationResponse setUserId(UUID userId) {
         this.userId = userId;
+        return this;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public UserRegistrationResponse setFirstName(String firstName) {
         this.firstName = firstName;
+        return this;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public UserRegistrationResponse setLastName(String lastName) {
         this.lastName = lastName;
+        return this;
     }
 
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public UserRegistrationResponse setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+        return this;
     }
 
     public UserRoles getRoles() {
         return roles;
     }
 
-    public void setRoles(UserRoles roles) {
+    public UserRegistrationResponse setRoles(UserRoles roles) {
         this.roles = roles;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public UserRegistrationResponse setEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public String getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(String avatar) {
+    public UserRegistrationResponse setAvatar(String avatar) {
         this.avatar = avatar;
+        return this;
     }
 
     public Instant getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Instant createdAt) {
+    public UserRegistrationResponse setCreatedAt(Instant createdAt) {
         this.createdAt = createdAt;
+        return this;
     }
 
     public Instant getLastModifiedDate() {
         return lastModifiedDate;
     }
 
-    public void setLastModifiedDate(Instant lastModifiedDate) {
+    public UserRegistrationResponse setLastModifiedDate(Instant lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
+        return this;
     }
 }
