@@ -36,7 +36,7 @@ public record UserRegistrationRequest(
         @NotNull(message = "Date of birth is required")
         @Past(message = "Date of birth must be in the past")
         @NotNull(message = "date_of_birth cannot be null")
-        @JsonProperty("first_name")
+        @JsonProperty("date_of_birth")
         LocalDate dateOfBirth,
 
 

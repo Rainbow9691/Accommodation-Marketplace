@@ -1,11 +1,8 @@
 package com.dcl.accommodate.controller;
 
 import com.dcl.accommodate.dto.request.UserRegistrationRequest;
-import com.dcl.accommodate.dto.response.UserRegistrationResponse;
 import com.dcl.accommodate.dto.wrapper.ApiAcknowledge;
-import com.dcl.accommodate.model.User;
-import com.dcl.accommodate.service.UserService;
-import com.dcl.accommodate.shared.ResponseStructure;
+import com.dcl.accommodate.service.contracts.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
