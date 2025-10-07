@@ -1,14 +1,9 @@
 package com.dcl.accommodate.dto.request;
 
-
-import com.dcl.accommodate.enums.UserRoles;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.*;
-
 import java.time.LocalDate;
-import java.util.Date;
 
 public record UserRegistrationRequest(
         @NotBlank(message = "first_name is required")
@@ -21,7 +16,6 @@ public record UserRegistrationRequest(
         @JsonProperty("first_name")
         String firstName,
 
-
         @NotBlank(message = "last_name is required")
         @Size(min = 2, max = 50, message = "last_name length must be between 2 and 50")
         @Pattern(
@@ -32,13 +26,11 @@ public record UserRegistrationRequest(
         @JsonProperty("last_name")
         String lastName,
 
-
         @NotNull(message = "Date of birth is required")
         @Past(message = "Date of birth must be in the past")
         @NotNull(message = "date_of_birth cannot be null")
         @JsonProperty("date_of_birth")
         LocalDate dateOfBirth,
-
 
         @Email(message = "Email must be valid")
         @NotBlank(message = "Email is required")

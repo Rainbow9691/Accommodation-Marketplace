@@ -1,9 +1,7 @@
 package com.dcl.accommodate.model;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
 import java.time.Instant;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.UUID;
 import com.dcl.accommodate.enums.UserRoles;
 import lombok.*;
@@ -57,6 +55,5 @@ public class User {
     @Column(name = "last_modified_date")
     @LastModifiedDate
     private Instant lastModifiedDate;
-
-
+    
 }
