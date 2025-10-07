@@ -17,7 +17,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Builder
 @EntityListeners(AuditingEntityListener.class)
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "user_id", nullable = false)
@@ -55,5 +54,5 @@ public class User {
     @Column(name = "last_modified_date")
     @LastModifiedDate
     private Instant lastModifiedDate;
-    
+
 }
