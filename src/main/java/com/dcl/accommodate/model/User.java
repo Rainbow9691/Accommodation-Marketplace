@@ -1,59 +1,57 @@
 package com.dcl.accommodate.model;
-
-import com.dcl.accommodate.enums.UserRole;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.util.UUID;
+import com.dcl.accommodate.enums.UserRoles;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.util.UUID;
-
-@Entity
-@Getter
 @Setter
-@Table(name = "users")
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Builder
 @EntityListeners(AuditingEntityListener.class)
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "userId")
+    @Column(name = "user_id", nullable = false)
     private UUID userId;
 
-    @Column(name = "firstName",nullable = false)
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "lastName",nullable = false)
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(name = "dateOfBirth")
+    @Column(name = "date_of_birth", nullable = false)
     private LocalDate dateOfBirth;
 
-    @Column(name = "role",nullable = false)
+    @Column(name = "roles", nullable = false, length = 20)
     @Enumerated(EnumType.STRING)
-    private UserRole role;
+    private UserRoles roles;
 
-    @Column(name = "email",nullable = false,unique = true)
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "password",nullable = false)
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "phoneNumber")
+    @Column(name = "phone_number", nullable = false)
     private String phoneNumber;
 
     @Column(name = "avatar")
     private String avatar;
 
-    @Column(name = "createdAt",nullable = false,updatable = false)
+    @Column(name = "created_date", nullable = false, updatable = false)
     @CreatedDate
-    private Instant createdDate;
+    private Instant createdAt;
 
-    @Column(name = "lastModifiedAt")
+    @Column(name = "last_modified_date")
     @LastModifiedDate
     private Instant lastModifiedDate;
 
