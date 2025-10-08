@@ -1,7 +1,6 @@
 package com.dcl.accommodate.controller;
 
 import com.dcl.accommodate.dto.request.UserRegistrationRequest;
-import com.dcl.accommodate.dto.wrapper.ApiAcknowledge;
 import com.dcl.accommodate.service.contracts.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

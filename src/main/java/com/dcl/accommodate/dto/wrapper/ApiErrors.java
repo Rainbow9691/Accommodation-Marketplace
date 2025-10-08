@@ -5,6 +5,6 @@ import java.util.List;
 public record ApiErrors(
         boolean success,
         String message,
-        List<FieldErrors> errors
+        List<FieldError> errors
 ) {
 }

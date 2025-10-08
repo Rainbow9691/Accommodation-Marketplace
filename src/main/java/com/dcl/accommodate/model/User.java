@@ -1,9 +1,10 @@
 package com.dcl.accommodate.model;
+import com.dcl.accommodate.enums.UserRole;
 import jakarta.persistence.*;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.UUID;
-import com.dcl.accommodate.enums.UserRoles;
+
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -33,7 +34,7 @@ public class User {
 
     @Column(name = "roles", nullable = false, length = 20)
     @Enumerated(EnumType.STRING)
-    private UserRoles roles;
+    private UserRole role;
 
     @Column(name = "email", nullable = false, unique = true)
     private String email;
