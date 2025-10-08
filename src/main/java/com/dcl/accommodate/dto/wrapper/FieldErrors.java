@@ -1,6 +1,6 @@
 package com.dcl.accommodate.dto.wrapper;
 
-public record FieldErrors(
+public record FieldError(
         String rejectedField,
         Object rejectedValue,
         String message
