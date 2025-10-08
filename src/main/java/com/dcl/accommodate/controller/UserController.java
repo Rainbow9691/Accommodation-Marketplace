@@ -1,6 +1,7 @@
 package com.dcl.accommodate.controller;
 
 import com.dcl.accommodate.dto.request.UserRegistrationRequest;
+import com.dcl.accommodate.dto.wrapper.ApiAck;
 import com.dcl.accommodate.service.contracts.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,9 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<ApiAcknowledge>  registerUser(@RequestBody @Valid UserRegistrationRequest request){
+    public ResponseEntity<ApiAck>  registerUser(@RequestBody @Valid UserRegistrationRequest request){
         userService.registerUser(request);
         return ResponseEntity.created(URI.create(("/api/v1/profile")))
-                .body(new ApiAcknowledge(true,"User registered successfully"));
+                .body(new ApiAck(true,"User registered successfully"));
     }
 }
