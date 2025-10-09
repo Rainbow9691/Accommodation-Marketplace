@@ -21,14 +21,6 @@ public class AccommodationMarketplaceApplication {
 
         var context = SpringApplication.run(AccommodationMarketplaceApplication.class, args);
         var app = context.getBean(AccommodationMarketplaceApplication.class);
-
-        Map<String,Object> claims = Map.of(
-                "email","raj9691vis@gmail.com",
-                "role", UserRole.HOST.name()
-        );
-
-        var token = app.jwtService.generateToken(claims,"raj", Duration.ofHours(1));
-        System.out.println(token);
 	}
 
 }
