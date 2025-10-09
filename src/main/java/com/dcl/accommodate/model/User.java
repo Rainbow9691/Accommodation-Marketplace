@@ -14,6 +14,7 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@Builder
 @Table(name = "users")
 @EntityListeners(AuditingEntityListener.class)
 public class User {
@@ -33,7 +34,7 @@ public class User {
 
     @Column(name = "user_role", nullable = false)
     @Enumerated(EnumType.STRING)
-    private UserRole userRole;
+    private UserRole role;
 
     @Column(name = "email", nullable = false, unique = true)
     private String email;
@@ -47,7 +48,7 @@ public class User {
     @Column(name = "avatar")
     private String avatar;
 
-    @Column(name = "created_date",nullable = false, updatable = false)
+    @Column(name = "created_date", nullable = false, updatable = false)
     @CreatedDate
     private Instant createdDate;
 
